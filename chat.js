@@ -1,9 +1,9 @@
 const firebaseConfig = {
   apiKey: "AIzaSyAa9nIvVqumqkClFO8il19Va0KoQ_wmN8M",
-  authDomain: "yexs-chat.firebaseapp.com",
-  databaseURL: "https://yexs-chat-default-rtdb.firebaseio.com",
-  projectId: "yexs-chat",
-  storageBucket: "yexs-chat.appspot.com",
+  authDomain: "NeoDango's-chat.firebaseapp.com",
+  databaseURL: "https://NeoDango's-chat-default-rtdb.firebaseio.com",
+  projectId: "NeoDango's-chat",
+  storageBucket: "NeoDango's-chat.appspot.com",
   messagingSenderId: "784190773413",
   appId: "1:784190773413:web:5de305c6e34bc779a6154c"
 };
@@ -36,7 +36,7 @@ class User {
     this.username = name;
   }
   meetsConstraints() {
-    return (this.username.length <= 25 && !usernames.includes(this.username) && !this.username.toLowerCase().includes(atob('bmlnZ2Vy')) && !this.username.match(/^yex$/i)) || (this.username.match(/^yex$/i) && localStorage.getItem('uuid') == atob("YzUzNDBkYzQtODZmMi00NmFlLTg0OGYtZDYyZmU1YzJkZjA5"));
+    return (this.username.length <= 25 && !usernames.includes(this.username) && !this.username.toLowerCase().includes(atob('bmlnZ2Vy')) && !this.username.match(/^NeoDango$/i)) || (this.username.match(/^NeoDango$/i) && localStorage.getItem('uuid') == atob("YzUzNDBkYzQtODZmMi00NmFlLTg0OGYtZDYyZmU1YzJkZjA5"));
   }
   changeUsername(newName) {
     usernames.deleteItem(this.username);
@@ -55,7 +55,7 @@ class User {
       return errorMsgs[0];
     else if(usernames.includes(this.username) || this.username.toLowerCase().includes(atob('bmlnZ2Vy')))
       return errorMsgs[1]; 
-    else if(this.username.match(/^yex$/i) && localStorage.getItem('uuid') != atob("YzUzNDBkYzQtODZmMi00NmFlLTg0OGYtZDYyZmU1YzJkZjA5")) 
+    else if(this.username.match(/^NeoDango$/i) && localStorage.getItem('uuid') != atob("YzUzNDBkYzQtODZmMi00NmFlLTg0OGYtZDYyZmU1YzJkZjA5")) 
       return errorMsgs[1];
    } else return "No Error Thrown!"; 
   }
